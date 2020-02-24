@@ -5,7 +5,7 @@ module.exports = {
   authorName: 'Stijn Van Asschodt',
   twitterUsername: 'van_asschodt',
   githubUsername: 'Hzunax',
-  authorAvatar: '/images/Stijn_avatar.png',
+  authorAvatar: '/images/avatar.png',
   authorDescription: `Motivated, hard-working developer with an appetite for learning new things. <br />
     Graduated in 2017 as a Master in Industrial Engineering - Electronics & ICT at KULeuven. <br />
     In 2018, I became a certified Scrum Master, which has helped me in better understanding the Agile environment at my current employer. <br />
