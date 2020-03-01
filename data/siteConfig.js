@@ -5,7 +5,7 @@ module.exports = {
   authorName: 'Stijn Van Asschodt',
   twitterUsername: 'van_asschodt',
   githubUsername: 'Hzunax',
-  authorAvatar: '/images/avatar.png',
+  authorAvatar: '/images/Stijn_Surfers_Paradise.jpg',
   authorDescription: `Motivated, hard-working developer with an appetite for learning new things. <br />
     Graduated in 2017 as a Master in Industrial Engineering - Electronics & ICT at KULeuven. <br />
     In 2018, I became a certified Scrum Master, which has helped me in better understanding the Agile environment at my current employer. <br />
@@ -67,7 +67,7 @@ module.exports = {
   },
   siteUrl: 'https://santosfrancisco.github.io/gatsbystarter-cv',
   pathPrefix: '/gatsby-starter-cv', // Note: it must *not* have a trailing slash.
-  siteCover: '/images/coccora.jpg',
+  siteCover: '/images/cocora-low-quality.jpg',
   background_color: '#ffffff',
   theme_color: '#25303B',
   display: 'minimal-ui',
