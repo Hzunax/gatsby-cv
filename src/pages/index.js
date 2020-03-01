@@ -21,9 +21,6 @@ const Separator = styled.hr`
 class Home extends React.Component {
   render () {
     // validate siteConfig settings
-    if (siteConfig.googleAnalyticsId === 'UA-000000000-1') {
-      console.error('WARNING: Please set a proper googleAnalyticsId. See https://analytics.google.com for details.');
-    }
 
     const title = siteConfig.siteTitle
     const {keywords} = siteConfig
@@ -45,7 +42,7 @@ class Home extends React.Component {
               <Col xs={4} className='avatar'>
                 <img
                   className='avatar__image'
-                  src='/images/Stijn_avatar.png'
+                  src='/images/Stijn_Surfers_Paradise.jpg'
                   alt='user avatar'
                 />
                 <div className="social">
