@@ -13,27 +13,27 @@ module.exports = {
   skills: [
     {
       name: 'JavaScript',
-      level: 70
+      level: 65
     },
     {
       name: 'HTML',
-      level: 60
+      level: 50
     },
     {
       name: 'CSS',
-      level: 60
+      level: 70
     },
     {
       name: 'NodeJs',
-      level: 40
+      level: 60
     },
     {
       name: 'React',
-      level: 40
+      level: 54
     },
     {
       name: 'Git',
-      level: 50
+      level: 70
     }
   ],
   jobs: [
