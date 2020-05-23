@@ -1,27 +1,27 @@
-import React from 'react'
-import styled from 'styled-components'
-import { Container, Row, Col } from 'react-awesome-styled-grid'
-import { FaGithub, FaLinkedin, FaEnvelope, FaTwitter } from "react-icons/fa"
-import siteConfig from '../../data/siteConfig'
+import React from 'react';
+import styled from 'styled-components';
+import { Container, Row, Col } from 'react-awesome-styled-grid';
+import { FaGithub, FaLinkedin, FaEnvelope, FaTwitter } from 'react-icons/fa';
+import siteConfig from '../../data/siteConfig';
 
-import Layout from '../components/layout'
-import Hero from '../components/hero'
-import SEO from '../components/SEO'
-import Wrapper from '../components/wrapper'
-import About from '../components/about'
-import Skills from '../components/skills'
-import Timeline from '../components/timeline'
-import Repositories from '../components/repositories'
+import Layout from '../components/layout';
+import Hero from '../components/hero';
+import SEO from '../components/SEO';
+import Wrapper from '../components/wrapper';
+import About from '../components/about';
+import Skills from '../components/skills';
+import Timeline from '../components/timeline';
+import Repositories from '../components/repositories';
 import Articles from '../components/articles';
 
 const Separator = styled.hr`
   margin-top: 24px;
   margin-bottom: 16px;
-`
+`;
 
 const Home = (props) => {
   // validate siteConfig settings
-  const title = siteConfig.siteTitle
+  const title = siteConfig.siteTitle;
   const {keywords} = siteConfig
   return (
     <Layout location={props.location}>
@@ -37,8 +37,8 @@ const Home = (props) => {
 
       <Wrapper className={props.className} >
         <Container className="page-content" fluid>
-          <Row>
-            <Col xs={4} className='avatar'>
+          <Row className="container-row">
+            <Col xs={4} className='avatar container-col'>
               <img
                 className='avatar__image'
                 src={siteConfig.authorAvatar}
@@ -60,11 +60,11 @@ const Home = (props) => {
               </div>
             </Col>
           </Row>
-          <Row>
-            <Col xs={4} sm={4}>
+          <Row className="container-row">
+            <Col xs={4} sm={4} className="container-col">
               <About title='About' text={siteConfig.authorDescription}/>
             </Col>
-            <Col xs={4} sm={4}>
+            <Col xs={4} sm={4}  className="container-col">
               <Skills title='Skills' skills={siteConfig.skills} />
             </Col>
           </Row>
@@ -83,6 +83,10 @@ export default styled(Home)`
   .page-content {
     max-width: 100%;
     margin-bottom: 40px;
+  }
+
+  .container-row {
+    margin: 0;
   }
 
   .avatar {
@@ -122,5 +126,15 @@ export default styled(Home)`
 
   a.social-link.email:hover {
     color: #c23a2b;
+  }
+
+  @media (max-width: 480px) {
+    .container-col {
+      padding: 0;
+    }
+
+    .page-content {
+      padding: 0;
+    }
   }
 `

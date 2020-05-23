@@ -1,12 +1,12 @@
-import React from 'react'
-import styled from 'styled-components'
-import { config } from 'react-awesome-styled-grid'
-import siteConfig from '../../../data/siteConfig'
+import React from 'react';
+import styled from 'styled-components';
+import { config } from 'react-awesome-styled-grid';
+import siteConfig from '../../../data/siteConfig';
 
 const Timeline = ({ className }) => {
   return (
     <div className={className}>
-      <h1>Experience</h1>
+      <h1 className="timeline__header">Experience</h1>
       {siteConfig.jobs && siteConfig.jobs.map(job => (
         <article key={job.begin.month + job.begin.year} className='timeline__item'>
           <div className="inner">
@@ -95,8 +95,8 @@ export default styled(Timeline)`
     content: '';
     position: absolute;
     top: -5px;
-    left: 30%;
-    width: 10px; 
+    left: calc(50% - 5px); /* 50% minus half width */
+    width: 10px;
     height: 10px;
     transform: rotate(-45deg);
   }
@@ -116,6 +116,12 @@ export default styled(Timeline)`
   }
   .timeline__title:after {
     background: #25303B;
+  }
+
+  @media (max-width: 480px) {
+    .timeline__header {
+      text-align: center;
+    }
   }
 
   .timeline__title--small {

@@ -1,7 +1,7 @@
-import React from 'react'
-import PropTypes from 'prop-types'
-import Helmet from 'react-helmet'
-import { StaticQuery, graphql } from 'gatsby'
+import React from 'react';
+import PropTypes from 'prop-types';
+import Helmet from 'react-helmet';
+import { StaticQuery, graphql } from 'gatsby';
 
 const SEO = ({ description, lang, meta, keywords, title }) => {
   return (
@@ -16,7 +16,7 @@ const SEO = ({ description, lang, meta, keywords, title }) => {
               lang,
             }}
             title={title}
-            titleTemplate={`%s | ${data.site.siteMetadata.title}`}
+            titleTemplate={`%s`}
             meta={[
               {
                 name: `description`,
