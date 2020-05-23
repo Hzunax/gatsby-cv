@@ -44,6 +44,12 @@ const StyledWrapper = styled.section`
   hr {
     margin-top: 16px;
   }
+
+  @media (max-width: 480px) {
+    .repositories__title {
+      text-align: center;
+    }
+  }
 `;
 
 const Repositories = (props) => {
@@ -63,7 +69,7 @@ const Repositories = (props) => {
 
   return (
     <StyledWrapper className={props.className}>
-      <h2>Latest repositories on Github</h2>
+      <h2 className="repositories__title">Latest repositories on Github</h2>
       {status === "loading" && <div className='repositories__loader'><Loader /></div>}
       {status === "ready" &&
         repos && (

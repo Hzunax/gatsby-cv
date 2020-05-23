@@ -1,4 +1,4 @@
-import styled from 'styled-components'
+import styled from 'styled-components';
 
 const Wrapper = styled.main.attrs({
   role: 'main',
@@ -19,6 +19,11 @@ const Wrapper = styled.main.attrs({
   @media (max-width: 780px) {
     width: 90%;
     padding: 25px;
+  }
+
+  @media (max-width: 480px) {
+    width: 100%;
+    padding: 20px;
   }
 `
 

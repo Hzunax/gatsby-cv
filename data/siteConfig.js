@@ -7,10 +7,7 @@ module.exports = {
   githubUsername: 'Hzunax',
   devToUsername: 'stijnva',
   authorAvatar: '/images/Stijn_Surfers_Paradise.jpg',
-  authorDescription: `Motivated, hard-working developer with an appetite for learning new things. <br />
-    Graduated in 2017 as a Master in Industrial Engineering - Electronics & ICT at KULeuven. <br />
-    In 2018, I became a certified Scrum Master, which has helped me in better understanding the Agile environment at my current employer. <br />
-    I currently work as a frontend developer, mainly with <strong>Javascript, Polymer & Web Components.</strong>`,
+  authorDescription: `Motivated, hard-working developer with an appetite for learning new things. Graduated in 2017 as a Master in industrial engineering: electronics-ICT at KULeuven. In 2018, I became a certified Scrum Master, which has helped me in better understanding the Agile environment at my current employer. I currently work as a frontend developer, mainly with Javascript, Polymer & Web Components.`,
   skills: [
     {
       name: 'JavaScript',

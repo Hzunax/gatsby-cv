@@ -1,10 +1,25 @@
-import React from 'react'
+import React from 'react';
+import styled from 'styled-components';
 
-export default ({ title = 'about', text = '' }) => {
+const StyledWrapper = styled.section`
+  .about__summary {
+    line-height: 1.7;
+  }
+
+  @media (max-width: 480px) {
+    .about__title {
+      text-align: center;
+    }
+  }
+`;
+
+const About = ({ title = 'about', text = '' }) => {
   return (
-    <div>
-      <h1>{title}</h1>
-      <p dangerouslySetInnerHTML={{ __html: text }}></p>
-    </div>
+    <StyledWrapper>
+      <h1 className="about__title">{title}</h1>
+      <p className="about__summary">{text}</p>
+    </StyledWrapper>
   )
-}
+};
+
+export default About;

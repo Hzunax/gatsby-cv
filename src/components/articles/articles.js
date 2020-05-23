@@ -44,6 +44,12 @@ const StyledWrapper = styled.section`
   hr {
     margin-top: 16px;
   }
+
+  @media (max-width: 480px) {
+    .articles__title {
+      text-align: center;
+    }
+  }
 `;
 
 const Articles = () => {
@@ -63,7 +69,7 @@ const Articles = () => {
 
   return (
     <StyledWrapper>
-      <h2>Latest blogposts</h2>
+      <h2 className="articles__title">Latest blogposts</h2>
       {status === "loading" && <div className='articles__loader'><Loader /></div>}
       {status === "ready" &&
         articles && (
