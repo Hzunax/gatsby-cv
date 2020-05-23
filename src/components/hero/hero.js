@@ -28,18 +28,14 @@ const HeroTitle = styled.h1`
   text-shadow: 1px 1px 4px rgba(34, 34, 34, 0.6);
 `
 
-class Hero extends React.Component {
-  render() {
-    const { title, className } = this.props
-
-    return (
-      <HeroContainer className={className}>
-        <TitleContainer>
-          <HeroTitle>{title}</HeroTitle>
-        </TitleContainer>
-      </HeroContainer>
-    )
-  }
+const Hero = ({ title, className }) => {
+  return (
+    <HeroContainer className={className}>
+      <TitleContainer>
+        <HeroTitle>{title}</HeroTitle>
+      </TitleContainer>
+    </HeroContainer>
+  );
 }
 
 export default styled(Hero)`

@@ -32,7 +32,7 @@ const HeaderNav = styled.nav`
 const HeaderLinkGroup = styled.div`
   display: flex;
   flex-direction: row;
-` 
+`
 
 const HeaderLink = styled(Link)`
   position: relative;
@@ -49,7 +49,7 @@ const HeaderLink = styled(Link)`
   z-index: 10;
 `
 const GithubLink = styled(({ className }) => (
-  <a 
+  <a
     className={className}
     href={`https://github.com/${siteConfig.githubUsername}`}
     target='_blank'
@@ -71,25 +71,23 @@ const GithubLink = styled(({ className }) => (
   z-index: 10;
 `
 
-class Header extends React.Component {
-  render () {
-    const { headerLinks } = siteConfig
+const Header = () => {
+  const { headerLinks } = siteConfig
 
-    return (
-      <HeaderWrapper>
-        <HeaderNav>
-          <HeaderLinkGroup>
-            {headerLinks.map((headerLink, i) => (
-              <HeaderLink to={headerLink.url} key={`header-link-${i}`}>
-                {headerLink.label}
-              </HeaderLink>
-            ))}
-          </HeaderLinkGroup>
-          <GithubLink />
-        </HeaderNav>
-      </HeaderWrapper>
-    )
-  }
+  return (
+    <HeaderWrapper>
+      <HeaderNav>
+        <HeaderLinkGroup>
+          {headerLinks.map((headerLink, i) => (
+            <HeaderLink to={headerLink.url} key={`header-link-${i}`}>
+              {headerLink.label}
+            </HeaderLink>
+          ))}
+        </HeaderLinkGroup>
+        <GithubLink />
+      </HeaderNav>
+    </HeaderWrapper>
+  );
 }
 
 export default Header

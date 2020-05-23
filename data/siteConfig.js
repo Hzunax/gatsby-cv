@@ -1,10 +1,11 @@
 module.exports = {
   siteTitle: 'Hi! I\'m Stijn!',
-  siteDescription: `Create your online curriculum in just a few minutes with this starter`,
+  siteDescription: `Website resume`,
   keyWords: ['gatsbyjs', 'react', 'curriculum'],
   authorName: 'Stijn Van Asschodt',
   twitterUsername: 'van_asschodt',
   githubUsername: 'Hzunax',
+  devToUsername: 'stijnva',
   authorAvatar: '/images/Stijn_Surfers_Paradise.jpg',
   authorDescription: `Motivated, hard-working developer with an appetite for learning new things. <br />
     Graduated in 2017 as a Master in Industrial Engineering - Electronics & ICT at KULeuven. <br />
@@ -65,13 +66,13 @@ module.exports = {
     github: "https://github.com/Hzunax",
     email: "stijn.van.asschodt@gmail.com"
   },
-  siteUrl: 'https://santosfrancisco.github.io/gatsbystarter-cv',
+  siteUrl: 'https://zealous-rosalind-fee447.netlify.app',
   pathPrefix: '/gatsby-starter-cv', // Note: it must *not* have a trailing slash.
-  siteCover: '/images/cocora-low-quality.jpg',
+  siteCover: '/images/cocora.jpg',
   background_color: '#ffffff',
   theme_color: '#25303B',
   display: 'minimal-ui',
-  icon: 'src/assets/gatsby-icon.png',
+  icon: 'src/assets/favicon-16x16.png',
   headerLinks: [
     {
       label: 'Stijn Van Asschodt',

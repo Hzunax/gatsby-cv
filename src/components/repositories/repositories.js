@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import jsonFetch from "simple-json-fetch";
 import styled from 'styled-components'
 import siteConfig from '../../../data/siteConfig'
@@ -8,57 +8,7 @@ import Loader from '../loader'
 const endpoint =
   `https://api.github.com/users/${siteConfig.githubUsername}/repos?type=owner&sort=updated&per_page=3&page=1`
 
-
-class Repositories extends React.Component {
-  constructor(props) {
-    super(props)
-    this.state = {
-      repos: [],
-      status: 'loading'
-    }
-  }
-  async componentDidMount () {
-    const repos = await jsonFetch(endpoint);
-    if (repos.json && repos.json.length) {
-      this.setState({ repos: repos.json, status: 'ready' })
-    }
-  }
-  render () {
-    const { status } = this.state
-    return (
-      <div className={this.props.className}>
-        <h2>Latest repositories on Github</h2>
-        {status === "loading" && <div className='repositories__loader'><Loader /></div>}
-        {status === "ready" &&
-          this.state.repos && (
-            <React.Fragment>
-              <div className="repositories__content">
-                {this.state.repos.map(repo => (
-                  <React.Fragment key={repo.name}>
-                    <div className="repositories__repo">
-                      <a className='repositories__repo-link' href={repo.html_url}>
-                        <strong>{repo.name}</strong>
-                      </a>
-                      <div>{repo.description}</div>
-                      <div className="repositories__repo-date">
-                        Updated: {new Date(repo.updated_at).toUTCString()}
-                      </div>
-                      <div className="repositories__repo-star">
-                        ★ {repo.stargazers_count}
-                      </div>
-                    </div>
-                    <hr />
-                  </React.Fragment>
-                ))}
-              </div>
-            </React.Fragment>
-          )}
-      </div>
-    )
-  }
-}
-
-export default styled(Repositories)`
+const StyledWrapper = styled.section`
   position: relative;
   .repositories__content {
     margin-bottom: 40px;
@@ -66,6 +16,11 @@ export default styled(Repositories)`
 
   .repositories__repo {
     position: relative;
+  }
+
+  .repositories__repo-title{
+    display: flex;
+    justify-content: space-between;
   }
 
   .repositories__repo-link {
@@ -79,9 +34,7 @@ export default styled(Repositories)`
   }
 
   .repositories__repo-star {
-    position: absolute;
-    top: 0;
-    right: 0;
+    white-space: nowrap;
   }
 
   .repositories__loader {
@@ -91,6 +44,53 @@ export default styled(Repositories)`
   hr {
     margin-top: 16px;
   }
+`;
 
-`
+const Repositories = (props) => {
+  const [ repos, setRepos ] = useState([]);
+  const [ status, setStatus ] = useState('loading');
 
+  useEffect(() => {
+    const fetchData = async () => {
+      const repos = await jsonFetch(endpoint);
+      if (repos.json && repos.json.length) {
+        setRepos(repos.json);
+        setStatus('ready');
+      }
+    };
+    fetchData();
+  }, []);
+
+  return (
+    <StyledWrapper className={props.className}>
+      <h2>Latest repositories on Github</h2>
+      {status === "loading" && <div className='repositories__loader'><Loader /></div>}
+      {status === "ready" &&
+        repos && (
+          <React.Fragment>
+            <div className="repositories__content">
+              {repos.map(repo => (
+                <React.Fragment key={repo.name}>
+                  <div className="repositories__repo">
+                    <div className="repositories__repo-title">
+                      <a className='repositories__repo-link' href={repo.html_url}>
+                        <strong>{repo.name}</strong>
+                      </a>
+                      <span className="repositories__repo-star">★ {repo.stargazers_count}</span>
+                    </div>
+                    <div>{repo.description}</div>
+                    <div className="repositories__repo-date">
+                      Updated: {new Date(repo.updated_at).toUTCString()}
+                    </div>
+                  </div>
+                  <hr />
+                </React.Fragment>
+              ))}
+            </div>
+          </React.Fragment>
+        )}
+    </StyledWrapper>
+  );
+}
+
+export default Repositories

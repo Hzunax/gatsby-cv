@@ -8,7 +8,7 @@ import Loader from '../loader';
 const endpoint = `https://dev.to/api/articles?per_page=3`;
 // const endpoint = `https://dev.to/api/articles?username=${siteConfig.devToUsername}`;
 
-const StyledWrapper = styled.div`
+const StyledWrapper = styled.section`
   position: relative;
   .articles__content {
     margin-bottom: 40px;
