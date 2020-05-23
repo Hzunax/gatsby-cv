@@ -1,12 +1,12 @@
 import React, { useState, useEffect } from 'react';
 import jsonFetch from 'simple-json-fetch';
 import styled from 'styled-components';
-// import siteConfig from '../../../data/siteConfig';
+import siteConfig from '../../../data/siteConfig';
 
 import Loader from '../loader';
 
-const endpoint = `https://dev.to/api/articles?per_page=3`;
-// const endpoint = `https://dev.to/api/articles?username=${siteConfig.devToUsername}`;
+// const endpoint = `https://dev.to/api/articles?per_page=3`;
+const endpoint = `https://dev.to/api/articles?username=${siteConfig.devToUsername}`;
 
 const StyledWrapper = styled.section`
   position: relative;
