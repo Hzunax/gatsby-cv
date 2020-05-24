@@ -12,7 +12,7 @@ const HeaderWrapper = styled.header`
   display: block;
   width: 100%;
   z-index: 1000;
-  background-color: #25303B;
+  background-color: #25303b;
 `;
 
 const HeaderNav = styled.nav`
@@ -26,7 +26,7 @@ const HeaderNav = styled.nav`
   justify-content: space-between;
   overflow-x: auto;
   overflow-y: hidden;
-  background-color: #25303B;
+  background-color: #25303b;
 `;
 
 const HeaderLinkGroup = styled.div`
@@ -78,8 +78,11 @@ const Header = () => {
     <HeaderWrapper>
       <HeaderNav>
         <HeaderLinkGroup>
-          {headerLinks.map((headerLink) => (
-            <HeaderLink to={headerLink.url} key={`header-link-${headerLink.id}`}>
+          {headerLinks.map(headerLink => (
+            <HeaderLink
+              to={headerLink.url}
+              key={`header-link-${headerLink.id}`}
+            >
               {headerLink.label}
             </HeaderLink>
           ))}

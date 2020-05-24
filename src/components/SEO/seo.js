@@ -15,12 +15,10 @@ const detailsQuery = graphql`
   }
 `;
 
-const SEO = ({
-  description, lang, meta, keywords, title,
-}) => (
+const SEO = ({ description, lang, meta, keywords, title }) => (
   <StaticQuery
     query={detailsQuery}
-    render={(data) => {
+    render={data => {
       const metaDescription = description || data.site.siteMetadata.description;
       return (
         <Helmet
@@ -66,10 +64,10 @@ const SEO = ({
             .concat(
               keywords.length > 0
                 ? {
-                  name: 'keywords',
-                  content: keywords.join(', '),
-                }
-                : [],
+                    name: 'keywords',
+                    content: keywords.join(', '),
+                  }
+                : []
             )
             .concat(meta)}
         />

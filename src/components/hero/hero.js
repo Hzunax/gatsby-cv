@@ -37,8 +37,8 @@ const Hero = ({ title, className }) => (
 );
 
 export default styled(Hero)`
-
-  ${(p) => `background-image: url(${p.heroImg || withPrefix(siteConfig.siteCover)});`}
+  ${p =>
+    `background-image: url(${p.heroImg || withPrefix(siteConfig.siteCover)});`}
   height: 70vh;
   background-attachment: fixed;
   background-position: center;

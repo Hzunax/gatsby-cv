@@ -24,10 +24,7 @@ const Text = styled.p`
 const NotFoundPage = ({ location }) => (
   <Layout location={location} noCover>
     <SEO title="Page Not Found" />
-    <Hero
-      heroImg="/images/404.jpeg"
-      title="404"
-    />
+    <Hero heroImg="/images/404.jpeg" title="404" />
     <Wrapper>
       <MainTitle>404 Page Not Found</MainTitle>
       <Icon>

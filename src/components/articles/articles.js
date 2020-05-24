@@ -25,7 +25,7 @@ const StyledWrapper = styled.section`
 
   .articles__article-link {
     text-decoration: none;
-    color: #25303B;
+    color: #25303b;
   }
 
   .articles__article-date {
@@ -70,35 +70,35 @@ const Articles = () => {
   return (
     <StyledWrapper>
       <h2 className="articles__title">Latest blogposts</h2>
-      {status === 'loading' && <div className="articles__loader"><Loader /></div>}
-      {status === 'ready'
-        && articles && (
-          <>
-            <div className="articles__content">
-              {articles.map((article) => (
-                <React.Fragment key={article.id}>
-                  <div className="articles__article">
-                    <div className="articles__article-title">
-                      <a className="articles__article-link" href={article.url}>
-                        <strong>{article.title}</strong>
-                      </a>
-                      <span className="articles__article-heart">
-                        ♥
-                        {article.positive_reactions_count}
-                      </span>
-                    </div>
-                    <div>{article.description}</div>
-                    <div className="articles__article-date">
-                      Created at:
-                      {' '}
-                      {new Date(article.created_at).toUTCString()}
-                    </div>
+      {status === 'loading' && (
+        <div className="articles__loader">
+          <Loader />
+        </div>
+      )}
+      {status === 'ready' && articles && (
+        <>
+          <div className="articles__content">
+            {articles.map(article => (
+              <React.Fragment key={article.id}>
+                <div className="articles__article">
+                  <div className="articles__article-title">
+                    <a className="articles__article-link" href={article.url}>
+                      <strong>{article.title}</strong>
+                    </a>
+                    <span className="articles__article-heart">
+                      ♥{article.positive_reactions_count}
+                    </span>
                   </div>
-                  <hr />
-                </React.Fragment>
-              ))}
-            </div>
-          </>
+                  <div>{article.description}</div>
+                  <div className="articles__article-date">
+                    Created at: {new Date(article.created_at).toUTCString()}
+                  </div>
+                </div>
+                <hr />
+              </React.Fragment>
+            ))}
+          </div>
+        </>
       )}
     </StyledWrapper>
   );

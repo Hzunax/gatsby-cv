@@ -1,5 +1,5 @@
 module.exports = {
-  siteTitle: 'Hi! I\'m Stijn!',
+  siteTitle: "Hi! I'm Stijn!",
   siteDescription: 'Website resume',
   keyWords: ['gatsbyjs', 'react', 'curriculum'],
   authorName: 'Stijn Van Asschodt',
@@ -7,7 +7,8 @@ module.exports = {
   githubUsername: 'Hzunax',
   devToUsername: 'stijnva',
   authorAvatar: '/images/Stijn_Surfers_Paradise.jpg',
-  authorDescription: '<p>I am a motivated, hard-working front-end engineer, with an appetite for learning new things. I graduated in 2017 as a Master in industrial engineering: electronics-ICT at KULeuven, after which I started my first job as a consultant at Exellys. In 2018, I became a certified Scrum Master, which has helped me in better understanding the Agile environment at the company I work for.</p> <p>My current tech stack consists mainly of JavaScript, Polymer & Web Components. Apart from that, I’m experimenting with React, Node and GraphQL in my side projects.</p>',
+  authorDescription:
+    '<p>I am a motivated, hard-working front-end engineer, with an appetite for learning new things. I graduated in 2017 as a Master in industrial engineering: electronics-ICT at KULeuven, after which I started my first job as a consultant at Exellys. In 2018, I became a certified Scrum Master, which has helped me in better understanding the Agile environment at the company I work for.</p> <p>My current tech stack consists mainly of JavaScript, Polymer & Web Components. Apart from that, I’m experimenting with React, Node and GraphQL in my side projects.</p>',
   skills: [
     {
       name: 'JavaScript',
@@ -43,9 +44,10 @@ module.exports = {
       },
       duration: null,
       occupation: 'Frontend developer',
-      description: 'Development, integration, maintenance and delivery of web components and an application that serves 30.000 customers daily.',
-
-    }, {
+      description:
+        'Development, integration, maintenance and delivery of web components and an application that serves 30.000 customers daily.',
+    },
+    {
       company: 'Exellys',
       begin: {
         month: 'Sep',
@@ -53,7 +55,8 @@ module.exports = {
       },
       duration: '2 yr',
       occupation: 'Frontend developer',
-      description: 'Developed several Polymer web components and created a web application used by internal employees',
+      description:
+        'Developed several Polymer web components and created a web application used by internal employees',
     },
     /* ... */
   ],

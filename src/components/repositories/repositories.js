@@ -17,14 +17,14 @@ const StyledWrapper = styled.section`
     position: relative;
   }
 
-  .repositories__repo-title{
+  .repositories__repo-title {
     display: flex;
     justify-content: space-between;
   }
 
   .repositories__repo-link {
     text-decoration: none;
-    color: #25303B;
+    color: #25303b;
   }
 
   .repositories__repo-date {
@@ -69,35 +69,35 @@ const Repositories = ({ className }) => {
   return (
     <StyledWrapper className={className}>
       <h2 className="repositories__title">Latest repositories on Github</h2>
-      {status === 'loading' && <div className="repositories__loader"><Loader /></div>}
-      {status === 'ready'
-        && repos && (
-          <>
-            <div className="repositories__content">
-              {repos.map((repo) => (
-                <React.Fragment key={repo.name}>
-                  <div className="repositories__repo">
-                    <div className="repositories__repo-title">
-                      <a className="repositories__repo-link" href={repo.html_url}>
-                        <strong>{repo.name}</strong>
-                      </a>
-                      <span className="repositories__repo-star">
-                        ★
-                        {repo.stargazers_count}
-                      </span>
-                    </div>
-                    <div>{repo.description}</div>
-                    <div className="repositories__repo-date">
-                      Updated:
-                      {' '}
-                      {new Date(repo.updated_at).toUTCString()}
-                    </div>
+      {status === 'loading' && (
+        <div className="repositories__loader">
+          <Loader />
+        </div>
+      )}
+      {status === 'ready' && repos && (
+        <>
+          <div className="repositories__content">
+            {repos.map(repo => (
+              <React.Fragment key={repo.name}>
+                <div className="repositories__repo">
+                  <div className="repositories__repo-title">
+                    <a className="repositories__repo-link" href={repo.html_url}>
+                      <strong>{repo.name}</strong>
+                    </a>
+                    <span className="repositories__repo-star">
+                      ★{repo.stargazers_count}
+                    </span>
                   </div>
-                  <hr />
-                </React.Fragment>
-              ))}
-            </div>
-          </>
+                  <div>{repo.description}</div>
+                  <div className="repositories__repo-date">
+                    Updated: {new Date(repo.updated_at).toUTCString()}
+                  </div>
+                </div>
+                <hr />
+              </React.Fragment>
+            ))}
+          </div>
+        </>
       )}
     </StyledWrapper>
   );
