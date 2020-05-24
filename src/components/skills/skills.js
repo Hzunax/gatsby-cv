@@ -10,15 +10,13 @@ const StyledWrapper = styled.section`
   }
 `;
 
-export default styled(({ className, title = 'Skills', skills = [] }) => {
-  return (
-    <StyledWrapper className={className}>
-      <h1 className="skills__title">{title}</h1>
-      {skills.map(skill => (
-        <SkillBar key={skill.name} name={skill.name} level={skill.level} />
-      ))}
-    </StyledWrapper>
-  )
-})`
+export default styled(({ className, title = 'Skills', skills = [] }) => (
+  <StyledWrapper className={className}>
+    <h1 className="skills__title">{title}</h1>
+    {skills.map(skill => (
+      <SkillBar key={skill.name} name={skill.name} level={skill.level} />
+    ))}
+  </StyledWrapper>
+))`
   width: 100%;
-`
+`;

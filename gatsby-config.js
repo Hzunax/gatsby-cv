@@ -1,11 +1,11 @@
-const config = require("./data/siteConfig");
+const config = require('./data/siteConfig');
 
 module.exports = {
   siteMetadata: {
     title: config.siteTitle,
     description: config.siteDescription,
     author: config.authorName,
-    ...config
+    ...config,
   },
   pathPrefix: config.pathPrefix,
   plugins: [
@@ -29,4 +29,4 @@ module.exports = {
     // To learn more, visit: https://gatsby.app/offline
     // 'gatsby-plugin-offline',
   ],
-}
+};

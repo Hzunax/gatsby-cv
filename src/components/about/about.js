@@ -13,13 +13,15 @@ const StyledWrapper = styled.section`
   }
 `;
 
-const About = ({ title = 'about', text = '' }) => {
-  return (
-    <StyledWrapper>
-      <h1 className="about__title">{title}</h1>
-      <p className="about__summary">{text}</p>
-    </StyledWrapper>
-  )
-};
+const About = ({ title = 'about', summary = [] }) => (
+  <StyledWrapper>
+    <h1 className="about__title">{title}</h1>
+    {summary.map(textItem => (
+      <p className="about__summary" key={textItem.id}>
+        {textItem.content}
+      </p>
+    ))}
+  </StyledWrapper>
+);
 
 export default About;

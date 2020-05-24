@@ -24,7 +24,8 @@ const Wrapper = styled.main.attrs({
   @media (max-width: 480px) {
     width: 100%;
     padding: 20px;
+    top: -50px;
   }
-`
+`;
 
-export default Wrapper
+export default Wrapper;

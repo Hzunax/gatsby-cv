@@ -19,53 +19,67 @@ const Separator = styled.hr`
   margin-bottom: 16px;
 `;
 
-const Home = (props) => {
+const Home = ({ location, className }) => {
   // validate siteConfig settings
   const title = siteConfig.siteTitle;
-  const {keywords} = siteConfig
+  const { keywords } = siteConfig;
   return (
-    <Layout location={props.location}>
-      <SEO
-        title={title}
-        keywords={keywords}
-      />
+    <Layout location={location}>
+      <SEO title={title} keywords={keywords} />
 
-      <Hero
-        heroImg={siteConfig.siteCover}
-        title={title}
-      />
+      <Hero heroImg={siteConfig.siteCover} title={title} />
 
-      <Wrapper className={props.className} >
+      <Wrapper className={className}>
         <Container className="page-content" fluid>
           <Row className="container-row">
-            <Col xs={4} className='avatar container-col'>
+            <Col xs={4} className="avatar container-col">
               <img
-                className='avatar__image'
+                className="avatar__image"
                 src={siteConfig.authorAvatar}
-                alt='user avatar'
+                alt="user avatar"
               />
               <div className="social">
-                {siteConfig.social.github && <a className="social-link github" href={siteConfig.social.github}>
-                  <FaGithub className="social-icon" size="32" />
-                </a>}
-                {siteConfig.social.linkedin && <a className="social-link linkedin" href={siteConfig.social.linkedin}>
-                  <FaLinkedin className="social-icon" size="32" />
-                </a>}
-                {siteConfig.social.twitter && <a className="social-link twitter" href={siteConfig.social.twitter}>
-                  <FaTwitter className="social-icon" size="32" />
-                </a>}
-                {siteConfig.social.email && <a className="social-link email" href={`mailto:${siteConfig.social.email}`}>
-                  <FaEnvelope className="social-icon" size="32" />
-                </a>}
+                {siteConfig.social.github && (
+                  <a
+                    className="social-link github"
+                    href={siteConfig.social.github}
+                  >
+                    <FaGithub className="social-icon" size="32" />
+                  </a>
+                )}
+                {siteConfig.social.linkedin && (
+                  <a
+                    className="social-link linkedin"
+                    href={siteConfig.social.linkedin}
+                  >
+                    <FaLinkedin className="social-icon" size="32" />
+                  </a>
+                )}
+                {siteConfig.social.twitter && (
+                  <a
+                    className="social-link twitter"
+                    href={siteConfig.social.twitter}
+                  >
+                    <FaTwitter className="social-icon" size="32" />
+                  </a>
+                )}
+                {siteConfig.social.email && (
+                  <a
+                    className="social-link email"
+                    href={`mailto:${siteConfig.social.email}`}
+                  >
+                    <FaEnvelope className="social-icon" size="32" />
+                  </a>
+                )}
               </div>
             </Col>
           </Row>
           <Row className="container-row">
             <Col xs={4} sm={4} className="container-col">
-              <About title='About' text={siteConfig.authorDescription}/>
+              <About title="About" summary={siteConfig.authorDescription} />
             </Col>
-            <Col xs={4} sm={4}  className="container-col">
-              <Skills title='Skills' skills={siteConfig.skills} />
+            <Col xs={4} sm={4} className="container-col">
+              <Skills title="Skills" skills={siteConfig.skills} />
             </Col>
           </Row>
           <Separator />
@@ -77,7 +91,7 @@ const Home = (props) => {
       </Wrapper>
     </Layout>
   );
-}
+};
 
 export default styled(Home)`
   .page-content {
@@ -96,7 +110,7 @@ export default styled(Home)`
   }
 
   .avatar__image {
-    box-shadow: 3px 3px 15px 0px rgba(0,0,0,0.75);
+    box-shadow: 3px 3px 15px 0px rgba(0, 0, 0, 0.75);
     max-width: 200px;
     border-radius: 100px;
     margin: 0 auto 24px;
@@ -121,7 +135,7 @@ export default styled(Home)`
   }
 
   a.social-link.linkedin:hover {
-    color: #0077B5;
+    color: #0077b5;
   }
 
   a.social-link.email:hover {
@@ -137,4 +151,4 @@ export default styled(Home)`
       padding: 0;
     }
   }
-`
+`;
