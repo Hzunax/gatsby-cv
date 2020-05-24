@@ -76,7 +76,7 @@ const Home = ({ location, className }) => {
           </Row>
           <Row className="container-row">
             <Col xs={4} sm={4} className="container-col">
-              <About title="About" text={siteConfig.authorDescription} />
+              <About title="About" summary={siteConfig.authorDescription} />
             </Col>
             <Col xs={4} sm={4} className="container-col">
               <Skills title="Skills" skills={siteConfig.skills} />
