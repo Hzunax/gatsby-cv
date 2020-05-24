@@ -26,6 +26,6 @@ const Wrapper = styled.main.attrs({
     padding: 20px;
     top: -50px;
   }
-`
+`;
 
-export default Wrapper
+export default Wrapper;

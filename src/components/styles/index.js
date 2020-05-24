@@ -1,9 +1,7 @@
-import GlobalStyle from './global-style'
-import ResetCSS from './resetcss'
+import GlobalStyle from './global-style';
+import ResetCSS from './resetcss';
 
 export {
   GlobalStyle,
-  ResetCSS
-}
-
-
+  ResetCSS,
+};

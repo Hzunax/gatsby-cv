@@ -14,13 +14,12 @@ const StyledWrapper = styled.section`
   }
 `;
 
-const About = ({ title = 'about', text = '' }) => {
-  return (
-    <StyledWrapper>
-      <h1 className="about__title">{title}</h1>
-      <p className="about__summary" dangerouslySetInnerHTML={{__html: DOMPurify.sanitize(text)}}></p>
-    </StyledWrapper>
-  )
-};
+const About = ({ title = 'about', text = '' }) => (
+  <StyledWrapper>
+    <h1 className="about__title">{title}</h1>
+    {/* eslint-disable-next-line react/no-danger */}
+    <p className="about__summary" dangerouslySetInnerHTML={{ __html: DOMPurify.sanitize(text) }} />
+  </StyledWrapper>
+);
 
 export default About;

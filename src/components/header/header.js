@@ -1,8 +1,8 @@
-import React from 'react'
-import { Link } from 'gatsby'
-import styled from 'styled-components'
-import { FaGithub } from "react-icons/fa"
-import siteConfig from '../../../data/siteConfig'
+import React from 'react';
+import { Link } from 'gatsby';
+import styled from 'styled-components';
+import { FaGithub } from 'react-icons/fa';
+import siteConfig from '../../../data/siteConfig';
 
 const HeaderWrapper = styled.header`
   position: fixed;
@@ -13,7 +13,7 @@ const HeaderWrapper = styled.header`
   width: 100%;
   z-index: 1000;
   background-color: #25303B;
-`
+`;
 
 const HeaderNav = styled.nav`
   margin-left: auto;
@@ -27,12 +27,12 @@ const HeaderNav = styled.nav`
   overflow-x: auto;
   overflow-y: hidden;
   background-color: #25303B;
-`
+`;
 
 const HeaderLinkGroup = styled.div`
   display: flex;
   flex-direction: row;
-`
+`;
 
 const HeaderLink = styled(Link)`
   position: relative;
@@ -47,12 +47,12 @@ const HeaderLink = styled(Link)`
   padding-right: 20px;
   min-width: 42px;
   z-index: 10;
-`
+`;
 const GithubLink = styled(({ className }) => (
   <a
     className={className}
     href={`https://github.com/${siteConfig.githubUsername}`}
-    target='_blank'
+    target="_blank"
     rel="noopener noreferrer"
   >
     <FaGithub size={32} />
@@ -69,17 +69,17 @@ const GithubLink = styled(({ className }) => (
   padding-right: 20px;
   min-width: 42px;
   z-index: 10;
-`
+`;
 
 const Header = () => {
-  const { headerLinks } = siteConfig
+  const { headerLinks } = siteConfig;
 
   return (
     <HeaderWrapper>
       <HeaderNav>
         <HeaderLinkGroup>
-          {headerLinks.map((headerLink, i) => (
-            <HeaderLink to={headerLink.url} key={`header-link-${i}`}>
+          {headerLinks.map((headerLink) => (
+            <HeaderLink to={headerLink.url} key={`header-link-${headerLink.id}`}>
               {headerLink.label}
             </HeaderLink>
           ))}
@@ -88,6 +88,6 @@ const Header = () => {
       </HeaderNav>
     </HeaderWrapper>
   );
-}
+};
 
-export default Header
+export default Header;

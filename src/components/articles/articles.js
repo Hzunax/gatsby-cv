@@ -53,14 +53,14 @@ const StyledWrapper = styled.section`
 `;
 
 const Articles = () => {
-  const [ articles, setArticles ] = useState([]);
-  const [ status, setStatus ] = useState('loading');
+  const [articles, setArticles] = useState([]);
+  const [status, setStatus] = useState('loading');
 
   useEffect(() => {
     const fetchData = async () => {
-      const articles = await jsonFetch(endpoint);
-      if (articles.json && articles.json.length) {
-        setArticles(articles.json);
+      const fetchedArticles = await jsonFetch(endpoint);
+      if (fetchedArticles.json && fetchedArticles.json.length) {
+        setArticles(fetchedArticles.json);
         setStatus('ready');
       }
     };
@@ -70,33 +70,38 @@ const Articles = () => {
   return (
     <StyledWrapper>
       <h2 className="articles__title">Latest blogposts</h2>
-      {status === "loading" && <div className='articles__loader'><Loader /></div>}
-      {status === "ready" &&
-        articles && (
-          <React.Fragment>
+      {status === 'loading' && <div className="articles__loader"><Loader /></div>}
+      {status === 'ready'
+        && articles && (
+          <>
             <div className="articles__content">
-              {articles.map(article => (
+              {articles.map((article) => (
                 <React.Fragment key={article.id}>
                   <div className="articles__article">
                     <div className="articles__article-title">
-                      <a className='articles__article-link' href={article.url}>
+                      <a className="articles__article-link" href={article.url}>
                         <strong>{article.title}</strong>
                       </a>
-                      <span className="articles__article-heart">♥ {article.positive_reactions_count}</span>
+                      <span className="articles__article-heart">
+                        ♥
+                        {article.positive_reactions_count}
+                      </span>
                     </div>
                     <div>{article.description}</div>
                     <div className="articles__article-date">
-                      Created at: {new Date(article.created_at).toUTCString()}
+                      Created at:
+                      {' '}
+                      {new Date(article.created_at).toUTCString()}
                     </div>
                   </div>
                   <hr />
                 </React.Fragment>
               ))}
             </div>
-          </React.Fragment>
-        )}
+          </>
+      )}
     </StyledWrapper>
-  )
-}
+  );
+};
 
 export default Articles;

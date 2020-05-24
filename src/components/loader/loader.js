@@ -1,16 +1,14 @@
-import React from 'react'
-import styled from 'styled-components'
+import React from 'react';
+import styled from 'styled-components';
 
-const Loader = ({className}) => {
-  return (
-    <div className={className}>
-      <div></div>
-      <div></div>
-      <div></div>
-      <div></div>
-    </div>
-  )
-}
+const Loader = ({ className }) => (
+  <div className={className}>
+    <div />
+    <div />
+    <div />
+    <div />
+  </div>
+);
 
 export default styled(Loader)`
   display: inline-block;
@@ -48,4 +46,4 @@ export default styled(Loader)`
     }
   }
 
-`
+`;

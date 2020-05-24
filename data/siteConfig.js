@@ -1,67 +1,67 @@
 module.exports = {
   siteTitle: 'Hi! I\'m Stijn!',
-  siteDescription: `Website resume`,
+  siteDescription: 'Website resume',
   keyWords: ['gatsbyjs', 'react', 'curriculum'],
   authorName: 'Stijn Van Asschodt',
   twitterUsername: 'van_asschodt',
   githubUsername: 'Hzunax',
   devToUsername: 'stijnva',
   authorAvatar: '/images/Stijn_Surfers_Paradise.jpg',
-  authorDescription: `<p>I am a motivated, hard-working front-end engineer, with an appetite for learning new things. I graduated in 2017 as a Master in industrial engineering: electronics-ICT at KULeuven, after which I started my first job as a consultant at Exellys. In 2018, I became a certified Scrum Master, which has helped me in better understanding the Agile environment at the company I work for.</p> <p>My current tech stack consists mainly of JavaScript, Polymer & Web Components. Apart from that, I’m experimenting with React, Node and GraphQL in my side projects.</p>`,
+  authorDescription: '<p>I am a motivated, hard-working front-end engineer, with an appetite for learning new things. I graduated in 2017 as a Master in industrial engineering: electronics-ICT at KULeuven, after which I started my first job as a consultant at Exellys. In 2018, I became a certified Scrum Master, which has helped me in better understanding the Agile environment at the company I work for.</p> <p>My current tech stack consists mainly of JavaScript, Polymer & Web Components. Apart from that, I’m experimenting with React, Node and GraphQL in my side projects.</p>',
   skills: [
     {
       name: 'JavaScript',
-      level: 65
+      level: 65,
     },
     {
       name: 'HTML',
-      level: 50
+      level: 50,
     },
     {
       name: 'CSS',
-      level: 70
+      level: 70,
     },
     {
       name: 'NodeJs',
-      level: 60
+      level: 60,
     },
     {
       name: 'React',
-      level: 54
+      level: 54,
     },
     {
       name: 'Git',
-      level: 70
-    }
+      level: 70,
+    },
   ],
   jobs: [
     {
-      company: "ING",
+      company: 'ING',
       begin: {
         month: 'Oct',
-        year: '2019'
+        year: '2019',
       },
       duration: null,
-      occupation: "Frontend developer",
-      description: "Development, integration, maintenance and delivery of web components and an application that serves 30.000 customers daily."
+      occupation: 'Frontend developer',
+      description: 'Development, integration, maintenance and delivery of web components and an application that serves 30.000 customers daily.',
 
     }, {
-      company: "Exellys",
+      company: 'Exellys',
       begin: {
         month: 'Sep',
-        year: '2017'
+        year: '2017',
       },
       duration: '2 yr',
-      occupation: "Frontend developer",
-      description: "Developed several Polymer web components and created a web application used by internal employees"
+      occupation: 'Frontend developer',
+      description: 'Developed several Polymer web components and created a web application used by internal employees',
     },
     /* ... */
   ],
   social: {
-    twitter: "https://twitter.com/van_asschodt",
-    linkedin: "https://www.linkedin.com/in/stijnvanasschodt/",
-    github: "https://github.com/Hzunax",
-    email: "stijn.van.asschodt@gmail.com"
+    twitter: 'https://twitter.com/van_asschodt',
+    linkedin: 'https://www.linkedin.com/in/stijnvanasschodt/',
+    github: 'https://github.com/Hzunax',
+    email: 'stijn.van.asschodt@gmail.com',
   },
   siteUrl: 'https://zealous-rosalind-fee447.netlify.app',
   pathPrefix: '/gatsby-starter-cv', // Note: it must *not* have a trailing slash.
@@ -72,8 +72,9 @@ module.exports = {
   icon: 'src/assets/favicon-16x16.png',
   headerLinks: [
     {
+      id: 1,
       label: 'Stijn Van Asschodt',
       url: '/',
-    }
-  ]
-}
+    },
+  ],
+};
