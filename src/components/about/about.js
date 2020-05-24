@@ -1,4 +1,5 @@
 import React from 'react';
+import DOMPurify from 'dompurify';
 import styled from 'styled-components';
 
 const StyledWrapper = styled.section`
@@ -17,7 +18,7 @@ const About = ({ title = 'about', text = '' }) => {
   return (
     <StyledWrapper>
       <h1 className="about__title">{title}</h1>
-      <p className="about__summary">{text}</p>
+      <p className="about__summary" dangerouslySetInnerHTML={{__html: DOMPurify.sanitize(text)}}></p>
     </StyledWrapper>
   )
 };
