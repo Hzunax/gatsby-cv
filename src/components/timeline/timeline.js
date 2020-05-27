@@ -18,7 +18,7 @@ const Timeline = ({ className }) => (
               <span className="timeline__year">{job.begin.year}</span>
             </span>
             <h2 className="timeline__title">
-              {job.occupation} at{job.company} <br />
+              {job.occupation} at {job.company} <br />
               <small className="timeline__title--small">
                 ({job.duration || 'present'})
               </small>
