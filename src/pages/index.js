@@ -9,7 +9,7 @@ import Hero from '../components/hero';
 import SEO from '../components/SEO';
 import Wrapper from '../components/wrapper';
 import About from '../components/about';
-import Skills from '../components/skills';
+// import Skills from '../components/skills';
 import Timeline from '../components/timeline';
 import Repositories from '../components/repositories';
 import Articles from '../components/articles';
@@ -25,7 +25,11 @@ const Home = ({ location, className }) => {
   const { keywords } = siteConfig;
   return (
     <Layout location={location}>
-      <SEO title={title} keywords={keywords} />
+      <SEO
+        title={title}
+        keywords={keywords}
+        description={siteConfig.authorDescription[0].content}
+      />
 
       <Hero heroImg={siteConfig.siteCover} title={title} />
 

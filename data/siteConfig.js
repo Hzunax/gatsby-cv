@@ -1,6 +1,6 @@
 module.exports = {
   siteTitle: "Hi! I'm Stijn!",
-  siteDescription: 'Website resume',
+  siteDescription: 'I am a front-end engineer with a passion for learning.',
   keyWords: ['gatsbyjs', 'react', 'curriculum'],
   authorName: 'Stijn Van Asschodt',
   twitterUsername: 'van_asschodt',
@@ -20,7 +20,7 @@ module.exports = {
       id: 2,
       content: `
         My current tech stack consists mainly of JavaScript, Polymer & Web Components.
-        Apart from that, I’m experimenting with React, Node and GraphQL in my side projects.
+        Apart from that, I’m experimenting with React, Node and GraphQL in my side projects and trying to get some experience with contributing to open source projects.
       `,
     },
   ],
