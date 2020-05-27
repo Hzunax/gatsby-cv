@@ -74,14 +74,15 @@ const Home = ({ location, className }) => {
               </div>
             </Col>
           </Row>
-          <Row className="container-row">
-            <Col xs={4} sm={4} className="container-col">
-              <About title="About" summary={siteConfig.authorDescription} />
-            </Col>
+          {/* <Row className="container-row">
+            <Col xs={4} sm={4} className="container-col"> */}
+          <About title="About" summary={siteConfig.authorDescription} />
+          {/* TODO find replacement for skill section */}
+          {/* </Col>
             <Col xs={4} sm={4} className="container-col">
               <Skills title="Skills" skills={siteConfig.skills} />
             </Col>
-          </Row>
+          </Row> */}
           <Separator />
           <Timeline />
           <Separator />
